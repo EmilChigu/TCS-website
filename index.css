@@ -1,0 +1,467 @@
+/* FONT */
+* {
+	font-family: 'Montserrat', sans-serif;
+	color: #101010;
+	font-weight: 400;
+}
+
+/* RESET */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Remove UL default styling */
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* NAVBAR */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 10px;
+}
+
+.center_menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.menu-item {
+	margin: 0px 10px;
+}
+
+.nav-button {
+	margin: 0px 10px;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+	display: none;
+}
+
+.bar {
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+	.center_menu {
+		position: fixed;
+		left: -100%;
+		top: 5rem;
+		flex-direction: column;
+		background-color: #fff;
+		width: 100%;
+		border-radius: 10px;
+		text-align: center;
+		transition: 0.3s;
+		box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+	}
+
+	.center_menu.active {
+		left: 0;
+	}
+
+	.menu-item {
+		margin: 2.5rem 0;
+	}
+
+	.hamburger {
+		display: block;
+		cursor: pointer;
+	}
+
+	.hamburger.active .bar:nth-child(2) {
+		opacity: 0;
+	}
+
+	.hamburger.active .bar:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+
+	.hamburger.active .bar:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+}
+
+.button {
+	background-color: #4b144d;
+	padding: 10px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.button-outline {
+	background-color: #fff;
+	border: 1px solid #4b144d;
+	padding: 10px;
+	border-radius: 5px;
+	color: #4b144d;
+	cursor: pointer;
+}
+
+.button-fullwidth {
+	display: block;
+	width: 100%;
+}
+
+/* LANDING PAGE */
+
+.landing_page {
+	background-image: url("/public/images/TCs_nurses.jpeg");
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.career_page {
+	background-image: url("/public/images/TCS-banner-2.png");
+	height: 560px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact_page {
+	background-image: url("/public/images/arms-care-check-905874.jpg");
+	height: 560px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.title {
+	font-size: 5rem;
+	font-weight: 700;
+	color: #fff;
+	text-align: center;
+}
+.sub_title {
+	font-size: 2rem;
+	text-align: center;
+	color: #fff;
+}
+
+.sub {
+	margin-top: 30px;
+	text-align: center;
+}
+.sub_button {
+	text-align: center;
+}
+
+.sub_button:hover {
+	background-color: #853485;
+}
+
+.three_columns {
+	background-color: rgb(248, 248, 248);
+	padding: 40px;
+}
+
+.column {
+	margin: 0px 20px;
+	background-color: white;
+}
+
+.column img {
+	height: auto;
+	width: 100%;
+	margin: 0px auto;
+}
+
+.spacing {
+	margin: 5px 0px;
+	padding: 10px 20px;
+}
+
+.zoom:hover {
+	margin-left: 20px;
+	cursor: pointer;
+	color: #4b144d;
+}
+
+.covid {
+	padding: 55px 30px;
+}
+.covid h1 {
+	font-size: 2em;
+	margin-bottom: 15px;
+	font-weight: bold;
+	color: #4b144d;
+}
+
+.covid p {
+	margin-bottom: 15px;
+}
+
+.covid h2 {
+	margin-bottom: 15px;
+}
+.covid i {
+	color: #4b144d;
+}
+
+.footer_top {
+	background-color: #4b144d;
+	color: white;
+	padding: 0px 40px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.footer_menu {
+	display: flex;
+	justify-content: center;
+}
+
+.footer_menu_item {
+	color: white;
+	margin: 20px 20px;
+}
+
+.footer hr {
+	border-top: 1px solid white;
+}
+
+.contact_footer {
+	color: white;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social_items {
+	margin: 10px 10px;
+}
+
+.social_items i {
+	color: white;
+	font-size: 2rem;
+}
+
+.bottom_menu {
+	background-color: #320d33;
+	padding: 30px 40px;
+	flex-direction: column;
+	display: flex;
+}
+
+.bottom_menu a {
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.bottom_menu p {
+	color: white;
+	text-align: center;
+	justify-content: center;
+}
+
+.developer {
+	background-color: #320d33;
+	text-align: center;
+	font-size: 0.8em;
+	padding-bottom: 20px;
+}
+
+.developer a {
+	color: white;
+}
+
+/* contact us page */
+
+.container {
+	padding: 2em 1em;
+}
+
+.form-group {
+	margin-bottom: 1em;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-sizing: border-box;
+	resize: vertical;
+	margin-top: 0.5em;
+}
+
+.region-contacts {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.region-contacts > div {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.form-right {
+	display: none;
+}
+.title-form {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+/* VISION PAGE */
+.vision_page {
+	position: relative;
+	height: 50vh;
+}
+
+.overlap {
+	background-image: url("/public/images/arms-care-check-905874.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.overlap_top {
+	position: absolute;
+	margin: 0 5%;
+	background-color: white;
+	top: 60%;
+	left: 0;
+	height: 45%;
+	width: 90%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.vision_title {
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #4b144d;
+}
+
+@media screen and (min-width: 768px) {
+	header {
+		padding: 0px 40px;
+	}
+
+	.three_columns {
+		display: flex;
+		flex: 1;
+		justify-content: space-around;
+		padding: 55px;
+	}
+
+	.column {
+		flex: 1;
+	}
+
+	.bottom_menu {
+		background-color: #320d33;
+		padding: 30px 40px;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	/* CONTACT PAGE */
+	.form {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	textarea {
+		margin-bottom: 1em;
+	}
+	.form-group {
+		width: 50%;
+		padding-right: 0.5em;
+	}
+	.region-contacts > div {
+		width: 25%;
+		margin-bottom: 1em;
+	}
+
+	.form-container {
+		display: flex;
+	}
+	.form-right {
+		display: block;
+		width: 50%;
+	}
+	.form-right svg {
+		width: 100%;
+	}
+
+	.form-left {
+		padding: 20px 20px;
+		width: 50%;
+	}
+
+	.title-form {
+		font-size: 2em;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	#check,
+	#check_2,
+	#check_3 {
+		animation: changeColor 3s infinite;
+	}
+
+	@keyframes changeColor {
+		0% {
+			fill: #101010;
+		}
+
+		100% {
+			fill: white;
+		}
+	}
+}
